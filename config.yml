@@ -1,0 +1,21 @@
+name: WordPress Plugin
+description: Generates WordPress Plugin
+outputs:
+  - generator:
+      engine: wpplugin.js
+      filename: README.md
+      schema:
+        type: posttype
+        properties:
+          name:
+            required: true
+            type: string
+          description:
+            required: true
+            type: string
+          version:
+            required: true
+            type:
+              - number
+              - string
+      template: template.hbs
